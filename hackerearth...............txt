@@ -1,0 +1,261 @@
+AVERAGE AND GRADE CALCULATION::
+
+
+
+import java.util.Scanner;
+public class GradeCalculation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            int mark = scanner.nextInt();
+            if (mark >= 50) {
+                sum += mark;
+            } else {
+                System.out.println("Grade: F!");
+                return;
+            }
+        }
+        int average = sum / n;
+        if (average >= 80 && average <= 100) {
+            System.out.println("Grade: O");
+        } else if (average >= 50 && average < 80) {
+            System.out.println("Grade: A");
+        } else {
+            System.out.println("Grade: F!");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sum of last digits of two given numbers::
+
+
+
+
+import java.util.Scanner;
+public class SumOfLastDigits {
+	public static void main(String[] args) {
+		//Input
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		
+		//Modifying the input
+		num1 = Math.abs(num1);
+		num2 = Math.abs(num2);
+		
+		//Calculating
+		int sumOfLastDigits = (num1 % 10) + (num2 % 10);
+		
+		//Output
+		System.out.println(+sumOfLastDigits);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONVERT NUMBERS INTO MONTHS::
+
+
+
+import java.util.Scanner;
+
+public class RamProblem {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int number = sc.nextInt();
+        if(number >= 1 && number <=12){
+            switch(number){
+                case 1: System.out.println("January"); break;
+                case 2: System.out.println("February"); break;
+                case 3: System.out.println("March"); break;
+                case 4: System.out.println("April"); break;
+                case 5: System.out.println("May"); break;
+                case 6: System.out.println("June"); break;
+                case 7: System.out.println("July"); break;
+                case 8: System.out.println("August"); break;
+                case 9: System.out.println("September"); break;
+                case 10: System.out.println("October"); break;
+                case 11: System.out.println("November"); break;
+                case 12: System.out.println("December"); break;
+            }
+        }
+        else
+            System.out.println("No month for the number "+number);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DIVISIBILITY OF K::
+
+
+
+import java.util.Scanner; 
+
+public class Main { 
+	public static void main(String[] args) 
+	{ 
+		Scanner sc = new Scanner(System.in); 
+		int A = sc.nextInt(); 
+		int B = sc.nextInt(); 
+		int K = sc.nextInt(); 
+		int count = 0; 
+
+		for (int i = A; i <= B; i++) { 
+			if (i % K == 0) 
+				count++; 
+		} 
+		System.out.println(count); 
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+IS ODD::
+
+
+
+import java.util.Scanner;
+
+public class OddNumber {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+       
+        int number = input.nextInt();
+        
+        
+        if(number % 2 != 0) {
+            System.out.println("2");
+        }
+        else {
+            System.out.println("1");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class EvenNumberCount {
+ 
+    public static void main(String[] args) {
+ 
+        int count = 0;
+        Scanner sc = new Scanner(System.in);
+ 
+        System.out.println("Enter five numbers: ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+        int num4 = sc.nextInt();
+        int num5 = sc.nextInt();
+ 
+        if (num1 % 2 == 0)
+            count++;
+        if (num2 % 2 == 0)
+            count++;
+        if (num3 % 2 == 0)
+            count++;
+        if (num4 % 2 == 0)
+            count++;
+        if (num5 % 2 == 0)
+            count++;
+ 
+        System.out.println("Number of even numbers: " + count);
+ 
+        sc.close();
+    }
+}
+
+
+
+
+
+
+
+public class SecondLastDigitNumber {
+    public static void main(String args[]) {
+      int num = 765432;
+      // Method 1
+      int digit = (num % 100) / 10;
+      System.out.println(num + " second last digit number is: " + digit);
+      
+      // Method 2
+      digit = (num /10) % 10;
+      System.out.println(num + " second last digit number is: " + digit);
+    }
+}
